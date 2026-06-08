@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Courses | Hot Beans Web</title>
+    </head>
+    <body>
+     
+    
+      <header>
+        <nav class="navbar">
+          <div class="logo">Hot<span>Beans</span></div>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="applynow.html">Apply Now</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="courses.html">Courses</a></li>
+          </ul>
+        </nav>
+      
+      </header>
+     
+     
+      <section class="hero">
+        <div class="container">
+          <h2>Our Web Development Courses</h2>
+          <p>
+            Explore professional courses designed to help you build strong skills
+            in web design, front-end development, and modern digital technologies.
+          </p>
+        </div>
+      </section>
+     
+
+      <section class="filter-section">
+        <div class="container filter-box">
+          <input type="text" id="searchInput" placeholder="Search courses..." />
+         
+          <select id="categoryFilter">
+            <option value="all">All Categories</option>
+            <option value="frontend">Front-End</option>
+            <option value="backend">Back-End</option>
+            <option value="design">Design</option>
+          </select>
+         
+        </div>
+      </section>
+    
+      <section class="courses-section">
+        <div class="container">
+          <h3>Available Courses</h3>
+     
+          <div class="courses-grid" id="coursesGrid">
+            <div class="course-card" data-category="frontend">
+              <h4>HTML & CSS Fundamentals</h4>
+              <p class="level">Beginner</p>
+              <p>
+                Learn how to create web pages using HTML and style them with CSS.
+              </p>
+                <a href="https://web.dev/learn/" target="_blank" class="course-btn">Read More</a>
+              
+              
+            
+            </div>
+     
+            <div class="course-card" data-category="frontend">
+              <h4>JavaScript Essentials</h4>
+              <p class="level">Beginner to Intermediate</p>
+              <p>
+                Understand variables, functions, events, and DOM manipulation.
+              </p>
+                <a href="https://web.dev/learn/" target="_blank" class="course-btn">Read More</a>
+            </div>
+     
+            <div class="course-card" data-category="design">
+              <h4>UI/UX Design Basics</h4>
+              <p class="level">Beginner</p>
+              <p>
+                Discover how to design user-friendly and visually attractive websites.
+              </p>
+              <a href="https://web.dev/learn/" target="_blank" class="course-btn">Read More</a>
+            </div>
+     
+            <div class="course-card" data-category="backend">
+              <h4>Introduction to Databases</h4>
+              <p class="level">Intermediate</p>
+              <p>
+                Learn how databases store information and support web applications.
+              </p>
+              <a href="https://web.dev/learn/" target="_blank" class="course-btn">Read More</a>
+            </div>
+     
+            <div class="course-card" data-category="backend">
+              <h4>PHP & MySQL Development</h4>
+              <p class="level">Intermediate</p>
+              <p>
+                Build dynamic websites using server-side programming and databases.
+              </p>
+              <a href="https://web.dev/learn/" target="_blank" class="course-btn">Read More</a>
+            </div>
+     
+            <div class="course-card" data-category="frontend">
+              <h4>Responsive Web Design</h4>
+              <p class="level">Intermediate</p>
+              <p>
+                Create websites that look professional on desktop, tablet, and mobile.
+              </p>
+              <a href="https://web.dev/learn/" target="_blank" class="course-btn">Read More</a>
+            </div>
+          </div>
+     
+          <p id="noResults" class="no-results">No courses found.</p>
+        </div>
+      </section>
+     
+      <section class="cta">
+        <div class="container">
+          <h3>Start Your Learning Journey Today</h3>
+          <p>
+            Join our courses and develop the skills needed for a successful career
+            in web development.
+          </p>
+          <a href="applynow.html" class="cta-btn">Apply Now</a>
+        </div>
+      </section>
+     
+      <footer>
+        <div class="container">
+          <p>&copy; 2026 Hot Beans Web. All rights reserved.</p>
+        </div>
+      </footer>
+     
+      
+    
+    <style>
+.navbar{
+      background-color: #634e6eb4;
+      color: white;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+  }
+  .logo span{
+      color: orange;
+  }
+  .navbar ul{
+      display: flex;
+      list-style: none;
+  }
+  .navbar li{
+      margin-right: 20px;
+  }
+  .navbar a{
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+  }
+
+  .navbar a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar a:hover {
+    transform: translateY(-3px);
+  }
+  
+  .navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 2px;
+    background: white;
+    transition: width 0.3s ease;
+  }
+  
+  .navbar a:hover::after {
+    width: 100%;
+  }
+  * {
+
+margin: 0;
+
+padding: 0;
+
+box-sizing: border-box;
+
+}
+
+
+
+body {
+
+font-family: Arial, sans-serif;
+
+line-height: 1.6;
+
+background-color: #f4f6f9;
+
+color: #333;
+
+}
+
+
+
+.container {
+
+width: 90%;
+
+max-width: 1100px;
+
+margin: auto;
+
+}
+
+.header {
+padding: 20px;
+background-color: #634e6eb4; ;
+}
+
+
+.hero {
+
+background: linear-gradient(rgba(31, 42, 68, 0.8), rgba(31, 42, 68, 0.8)),
+
+            url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80") center/cover no-repeat;
+
+color: white;
+
+text-align: center;
+
+padding: 80px 20px;
+
+}
+
+
+
+.hero h2 {
+
+font-size: 36px;
+
+margin-bottom: 15px;
+
+}
+
+
+
+.hero p {
+
+font-size: 18px;
+
+max-width: 700px;
+
+margin: auto;
+
+}
+
+
+.filter-section {
+
+padding: 30px 0;
+
+background-color: white;
+
+}
+
+
+
+.filter-box {
+
+display: flex;
+
+gap: 15px;
+
+justify-content: center;
+
+flex-wrap: wrap;
+
+}
+
+
+
+.filter-box input,
+
+.filter-box select {
+
+padding: 12px;
+
+width: 260px;
+
+border: 1px solid #ccc;
+
+border-radius: 6px;
+
+font-size: 16px;
+
+}
+
+
+.courses-section {
+
+padding: 50px 0;
+
+}
+
+
+
+.courses-section h3 {
+
+text-align: center;
+
+margin-bottom: 30px;
+
+font-size: 30px;
+
+}
+
+
+
+.courses-grid {
+
+display: grid;
+
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+gap: 25px;
+
+}
+
+
+
+.course-card {
+
+background-color: white;
+
+padding: 25px;
+
+border-radius: 10px;
+
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+
+transition: transform 0.3s ease;
+
+}
+
+
+
+.course-card:hover {
+
+transform: translateY(-5px);
+
+}
+
+
+
+.course-card h4 {
+
+margin-bottom: 10px;
+
+color: #1f2a44;
+
+}
+
+
+
+.level {
+
+font-weight: bold;
+
+color: #0077cc;
+
+margin-bottom: 10px;
+
+}
+
+
+
+.course-card p {
+
+margin-bottom: 15px;
+
+}
+
+
+
+.course-card button {
+
+background-color: #1f2a44;
+
+color: white;
+
+border: none;
+
+padding: 10px 18px;
+
+border-radius: 5px;
+
+cursor: pointer;
+
+}
+
+
+
+.course-card button:hover {
+
+background-color:#634e6eb4;
+
+}
+
+
+
+.no-results {
+
+text-align: center;
+
+margin-top: 20px;
+
+color: red;
+
+display: none;
+
+}
+
+
+.cta {
+
+background-color: #1f2a44;
+
+color: white;
+
+text-align: center;
+
+padding: 50px 20px;
+
+}
+
+
+
+.cta h3 {
+
+font-size: 30px;
+
+margin-bottom: 15px;
+
+}
+
+
+
+.cta p {
+
+margin-bottom: 20px;
+
+font-size: 17px;
+
+}
+
+.course-btn {
+  display: inline-block;
+  background-color: #1f2a44;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.course-btn:hover {
+  background-color: #634e6eb4;
+}
+
+footer {
+
+background-color: #111827;
+
+color: white;
+
+text-align: center;
+
+padding: 15px 0;
+
+}
+
+
+
+
+
+@media (max-width: 768px) {
+
+.nav {
+
+  flex-direction: column;
+
+  gap: 15px;
+
+}
+
+
+
+.hero h2 {
+
+  font-size: 28px;
+
+}
+
+
+
+.hero p {
+
+  font-size: 16px;
+
+}
+
+}
+
+ .site-footer {
+background: #0f172a;
+color: #e5e7eb;                
+padding: 2.5rem 1.5rem 1.5rem;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.site-footer a {
+color: inherit;
+text-decoration: none;
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible {
+text-decoration: underline;
+}
+
+.footer-inner {
+max-width: 1100px;
+margin: 0 auto;
+border-bottom: 1px solid rgba(148, 163, 184, 0.4);
+padding-bottom: 1.75rem;
+display: grid;
+gap: 1.75rem;
+}
+
+.footer-brand h2 {
+font-size: 1.4rem;
+margin: 0 0 0.4rem;
+}
+
+.footer-brand p {
+margin: 0;
+color: #9ca3af;
+max-width: 26rem;
+}
+
+.footer-columns {
+display: flex;
+flex-wrap: wrap;
+gap: 2.5rem;
+}
+
+.footer-nav h3,
+.footer-contact h3 {
+font-size: 0.95rem;
+letter-spacing: 0.06em;
+text-transform: uppercase;
+color: #9ca3af;
+margin: 0 0 0.75rem;
+}
+
+.footer-nav ul {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+.footer-nav li + li {
+margin-top: 0.4rem;
+}
+
+.footer-contact p {
+margin: 0 0 0.35rem;
+}
+
+.footer-bottom {
+max-width: 1100px;
+margin: 0.9rem auto 0;
+text-align: center;
+font-size: 0.85rem;
+color: #6b7280;
+}
+
+@media (min-width: 768px) {
+.footer-inner {
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  align-items: flex-start;
+}
+
+.footer-columns {
+  justify-content: flex-end;
+}
+}
+
+.site-footer a:focus-visible {
+outline: 2px solid #f97316;
+outline-offset: 2px;
+}
+
+    </style>
+    
+    <script>
+      // Select the search input box from the HTML using its ID
+
+const searchInput = document.getElementById("searchInput");
+
+ 
+
+// Select the category dropdown menu from the HTML using its ID
+
+const categoryFilter = document.getElementById("categoryFilter");
+
+ 
+
+// Select ALL course cards from the page using their class name
+
+// querySelectorAll returns a list of elements
+
+const cards = document.querySelectorAll(".course-card");
+
+ 
+
+ 
+
+// When the user types inside the search box,
+
+// run the filterCourses function
+
+searchInput.addEventListener("keyup", filterCourses);
+
+ 
+
+ 
+
+// When the user changes the category dropdown selection,
+
+// run the same filterCourses function
+
+categoryFilter.addEventListener("change", filterCourses);
+
+ 
+
+ 
+
+ 
+
+// Create a function called filterCourses
+
+// This function filters which course cards should appear
+
+function filterCourses() {
+
+ 
+
+  // Get the text typed by the user in the search box
+
+  // Convert it to lowercase so matching becomes easier
+
+  const text = searchInput.value.toLowerCase();
+
+ 
+
+ 
+
+  // Get the selected category from the dropdown menu
+
+  const category = categoryFilter.value;
+
+ 
+
+ 
+
+  // Go through each course card one by one
+
+  cards.forEach(function(card) {
+
+ 
+
+    // Find the title inside each course card (the h4 heading)
+
+    // Convert it to lowercase for easier comparison
+
+    const title = card.querySelector("h4").textContent.toLowerCase();
+
+ 
+
+ 
+
+    // Get the category stored inside the course card
+
+    // Example: frontend, backend, design
+
+    const cardCategory = card.dataset.category;
+
+ 
+
+ 
+
+    // Check TWO conditions:
+
+    // 1) Does the course title include the typed text?
+
+    // 2) Does the selected category match the card category?
+
+    // OR is the category set to "all"?
+
+    if (
+
+      title.includes(text) &&
+
+      (category === "all" || category === cardCategory)
+
+    ) {
+
+ 
+
+      // If BOTH conditions are true,
+
+      // show the course card
+
+      card.style.display = "block";
+
+ 
+
+    } else {
+
+ 
+
+      // Otherwise hide the course card
+
+      card.style.display = "none";
+
+ 
+
+    }
+
+ 
+
+  });
+
+ 
+
+}
+
+
+    </script>
+    
+    </body>
+    </html

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<!DOCTYPE html>
+    <html lang="en">
+      <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+    
+      <nav class="navbar">
+        <div class="logo">Hot<span>Beans</span></div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="jobs.html">Jobs</a></li>
+          <li><a href="applynow.html">Apply Now</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="courses.html">Courses</a></li>
+        </ul>
+      </nav>
+ 
+    
+
+    <section class="hero">
+      <div class="container">
+        <h2>Join Our Web Development Team</h2>
+        <p>Explore exciting career opportunities in HTML, CSS, and JavaScript development.</p>
+      </div>
+    </section>
+    
+    <section class="filter-section">
+      <div class="container filter-box">
+        <input type="text" id="searchInput" placeholder="Search jobs..." />
+    
+        <select id="categoryFilter">
+          <option value="all">All Roles</option>
+          <option value="html">HTML</option>
+          <option value="css">CSS</option>
+          <option value="javascript">JavaScript</option>
+        </select>
+      </div>
+    </section>
+    
+    <section class="courses-section">
+      <div class="container">
+        <h3>Available Positions</h3>
+    
+        <div class="courses-grid" id="coursesGrid">
+    
+          <div class="course-card" data-category="html">
+            <img src="html.jpg" alt="">
+            <h4>Junior HTML Developer</h4>
+            <p class="level">Entry Level</p>
+            <p>Create structured web pages using modern HTML5 standards.</p>
+            <button onclick="applyJob('Junior HTML Developer')">Apply Now</button>
+            
+          </div>
+    
+          <div class="course-card" data-category="css">
+            <img src="css.jpg" alt="">
+            <h4>CSS Designer</h4>
+            <p class="level">Intermediate</p>
+            <p>Design responsive and visually appealing layouts using CSS.</p>
+            <button onclick="applyJob('CSS Designer')">Apply Now</button>
+          </div>
+    
+          <div class="course-card" data-category="javascript">
+            <img src="javascript.jpg" alt="">
+            <h4>JavaScript Developer</h4>
+            <p class="level">Intermediate</p>
+            <p>Build interactive websites using JavaScript and DOM manipulation.</p>
+            <button onclick="applyJob('JavaScript Developer')">Apply Now</button>
+          </div>
+    
+          <div class="course-card" data-category="html">
+            <img src="frontend assistant.jpg" alt="">
+            <h4>Frontend Assistant</h4>
+            <p class="level">Entry Level</p>
+            <p>Support development teams with HTML structure and content updates.</p>
+            <button onclick="applyJob('Frontend Assistant')">Apply Now</button>
+          </div>
+    
+          <div class="course-card" data-category="css">
+            <img src="coding1.jpg" alt="">
+            <h4>UI Stylist</h4>
+            <p class="level">Intermediate</p>
+            <p>Enhance user interfaces with animations, layouts, and styling.</p>
+            <button onclick="applyJob('UI Stylist')">Apply Now</button>
+          </div>
+    
+          <div class="course-card" data-category="javascript">
+            <img src="frontend java.jpg" alt="">
+            <h4>Frontend JavaScript Engineer</h4>
+            <p class="level">Advanced</p>
+            <p>Develop dynamic web apps and interactive features.</p>
+            <button onclick="applyJob('Frontend JavaScript Engineer')">Apply Now</button>
+          </div>
+    
+        </div>
+    
+        <p id="noResults" class="no-results">No jobs found.</p>
+      </div>
+    </section>
+    
+    
+    <section class="cta">
+      <div class="container">
+        <h3>Start Your Career Today</h3>
+        <p>Apply now and become part of our growing development team.</p>
+        <a href="applynow.html" class="cta-btn">Apply Now</a>
+      </div>
+    </section>
+    
+    
+    <footer>
+      <div class="container">
+        <p>&copy; 2026 Hot Beans Web. All rights reserved.</p>
+      </div>
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <h2>Hot Beans</h2>
+            <p>Connecting talented developers with exciting opportunities.</p>
+          </div>
+      
+          <div class="footer-columns">
+            <nav class="footer-nav" aria-label="Footer navigation">
+              <h3>Explore</h3>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="applynow.html">Apply Now</a></li>
+                <li><a href="team.html">Team</a></li>
+              </ul>
+            </nav>
+      
+            <div class="footer-contact">
+              <h3>Connect</h3>
+              <p>Email: <a href="mailto:info@hotbeans.com">info@hotbeans.com</a></p>
+              <p>Phone: <a href="tel:+44123456789">+44 123 456 789</a></p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="footer-bottom">
+          <p>© 2026 Hot Beans Ltd. All rights reserved.</p>
+        </div>
+      </footer>
+
+    
+    <style>
+    
+    body {
+      font-family: Arial;
+      background: #f4f6f9;
+    }
+    
+    .course-card button {
+      background: #1f2a44;
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+    }
+    
+    .course-card button:hover {
+      background: #634e6eb4;
+    }
+
+    .course-card img {
+  width: 100%;
+  height: 200px;       
+  object-fit: cover;  
+}
+
+* {
+  margin: -1;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f6f9;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+header {
+  background-color: #634e6eb4;
+  color: white;
+  padding: 15px 0;
+}
+
+.navbar{
+      background-color: #634e6eb4;
+      color: white;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+  }
+  .logo span{
+      color: orange;
+  }
+  .navbar ul{
+      display: flex;
+      list-style: none;
+  }
+  .navbar li{
+      margin-right: 20px;
+  }
+  .navbar a{
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+  }
+
+  .navbar a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar a:hover {
+    transform: translateY(-3px);
+  }
+  
+  .navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 2px;
+    background: white;
+    transition: width 0.3s ease;
+  }
+  
+  .navbar a:hover::after {
+    width: 100%;
+  }
+
+
+
+.logo {
+  font-size: 24px;
+}
+
+.logo span {
+  color: orange;
+}
+
+
+.hero {
+  background: linear-gradient(rgba(31, 42, 68, 0.8), rgba(31, 42, 68, 0.8)),
+    url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80")
+    center/cover no-repeat;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: auto;
+}
+
+
+.filter-section {
+  padding: 30px 0;
+  background-color: white;
+}
+
+.filter-box {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.filter-box input,
+.filter-box select {
+  padding: 12px;
+  width: 260px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.container {
+color: white;
+}
+
+.courses-section {
+  padding: 50px 0;
+}
+
+.courses-section h3 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 30px;
+}
+
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+
+.course-card {
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+}
+
+.course-card h4 {
+  margin-bottom: 10px;
+  color: #1f2a44;
+}
+
+.level {
+  font-weight: bold;
+  color: #0077cc;
+  margin-bottom: 10px;
+}
+
+.course-card p {
+  margin-bottom: 15px;
+}
+
+
+.course-card button {
+  background-color: #1f2a44;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.course-card button:hover {
+  background-color: #634e6eb4;
+}
+
+.no-results {
+  text-align: center;
+  margin-top: 20px;
+  color: red;
+  display: none;
+}
+
+.cta {
+  background-color: #1f2a44;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.cta h3 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.cta p {
+  margin-bottom: 20px;
+}
+
+.cta-btn {
+  display: inline-block;
+  background-color: white;
+  color: #1f2a44;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.cta-btn:hover {
+  background-color: #e6e6e6;
+}
+
+footer {
+  background-color: #111827;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero h2 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+}
+    
+    </style>
+  
+    <script>
+    
+    const searchInput = document.getElementById("searchInput");
+    const categoryFilter = document.getElementById("categoryFilter");
+    const cards = document.querySelectorAll(".course-card");
+    
+    searchInput.addEventListener("keyup", filterJobs);
+    categoryFilter.addEventListener("change", filterJobs);
+    
+    function filterJobs() {
+      const text = searchInput.value.toLowerCase();
+      const category = categoryFilter.value;
+    
+      cards.forEach(function(card) {
+        const title = card.querySelector("h4").textContent.toLowerCase();
+        const cardCategory = card.dataset.category;
+    
+        if (
+          title.includes(text) &&
+          (category === "all" || category === cardCategory)
+        ) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    }
+    
+    function applyJob(jobTitle) {
+      alert("You are applying for: " + jobTitle);
+      window.location.href = "applynow.html";
+    }
+    
+    </script>
+    
+    </body>
+</head>
+<body>
+    
+</body>
+</html>

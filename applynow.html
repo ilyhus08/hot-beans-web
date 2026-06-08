@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Job Application</title>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Hot<span>Beans</span></div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="jobs.html">Jobs</a></li>
+          <li><a href="applynow.html">Apply Now</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="courses.html">Courses</a></li>
+        </ul>
+      </nav>
+    
+    <div class="container">
+  <h1>Apply for a Job</h1>
+  <p style="text-align:center;">Please fill in the information below</p>
+  <form>
+      <h2>Personal Information</h2>
+
+      <label>First Name</label>
+      <input type="text" required>
+
+      <label>Last Name</label>
+      <input type="text" required>
+
+      <label>Email</label>
+      <input type="email" required>
+
+      <label>Phone Number</label>
+      <input type="tel" required>
+
+      <h2>Employment Details</h2>
+
+      <label>Upload Resume</label>
+      <input type="file" accept=".pdf,.doc,.docx" required>
+
+      <label>Cover Letter</label>
+      <textarea rows="4"></textarea>
+
+      <label>Years of Experience</label>
+      <input type="number">
+
+      <label>Skills</label>
+      <input type="text">
+
+      <h2>Additional Information</h2>
+
+      <label>City</label>
+      <input type="text">
+
+      <label>Work Authorization</label>
+      <select>
+          <option>Yes</option>
+          <option>No</option>
+      </select>
+
+      <label>
+          <input type="checkbox" required> I agree to the terms and conditions
+      </label>
+
+      <button type="submit">Submit Application</button>
+  </form>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <h2>Hot Beans</h2>
+      <p>Connecting talented developers with exciting opportunities.</p>
+    </div>
+
+    <div class="footer-columns">
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="jobs.html">Jobs</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="applynow.html">Apply Now</a></li>
+          <li><a href="team.html">Team</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-contact">
+        <h3>Connect</h3>
+        <p>Email: <a href="mailto:info@hotbeans.com">info@hotbeans.com</a></p>
+        <p>Phone: <a href="tel:+44123456789">+44 123 456 789</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Hot Beans Ltd. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f2f4f7;
+    }
+
+    .container {
+        width: 400px;
+        margin: 50px auto;
+        background: #fff;
+        padding: 50px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1, h2 {
+        text-align: center;
+    }
+
+    label {
+        display: block;
+        margin-top: 10px;
+    }
+
+    input, textarea, select {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5x;
+        border-radius: 6px;
+        border: 2px solid #ccc;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        margin-top: 20px;
+        background: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #45a049;
+    }
+
+    .navbar{
+  background-color: #634e6eb4;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.logo span{
+  color: orange;
+}
+.navbar ul{
+  display: flex;
+  list-style: none;
+}
+.navbar li{
+  margin-right: 20px;
+}
+.navbar a{
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.navbar a {
+position: relative;
+text-decoration: none;
+color: white;
+padding: 10px 15px;
+transition: all 0.3s ease;
+}
+
+
+.navbar a:hover {
+transform: translateY(-3px);
+}
+
+
+.navbar a::after {
+content: "";
+position: absolute;
+left: 0;
+bottom: -3px;
+width: 0%;
+height: 2px;
+background: white;
+transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+width: 100%;
+}
+
+.site-footer {
+background: #0f172a;          
+color: #e5e7eb;                
+padding: 2.5rem 1.5rem 1.5rem;
+font-family: system-ui "Segoe UI", sans-serif;
+}
+
+.site-footer a {
+color: inherit;
+text-decoration: none;
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible {
+text-decoration: underline;
+}
+
+.footer-inner {
+max-width: 1100px;
+margin: 0 auto;
+border-bottom: 1px solid rgba(148, 163, 184, 0.4);
+padding-bottom: 1.75rem;
+display: grid;
+gap: 1.75rem;
+}
+
+.footer-brand h2 {
+font-size: 1.4rem;
+margin: 0 0 0.4rem;
+}
+
+.footer-brand p {
+margin: 0;
+color: #9ca3af;
+max-width: 26rem;
+}
+
+.footer-columns {
+display: flex;
+flex-wrap: wrap;
+gap: 2.5rem;
+}
+
+.footer-nav h3,
+.footer-contact h3 {
+font-size: 0.95rem;
+letter-spacing: 0.06em;
+text-transform: uppercase;
+color: #9ca3af;
+margin: 0 0 0.75rem;
+}
+
+.footer-nav ul {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+.footer-nav li + li {
+margin-top: 0.4rem;
+}
+
+.footer-contact p {
+margin: 0 0 0.35rem;
+}
+
+.footer-bottom {
+max-width: 1100px;
+margin: 0.9rem auto 0;
+text-align: center;
+font-size: 0.85rem;
+color: #6b7280;
+}
+
+</style>
