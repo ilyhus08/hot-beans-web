@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<nav class="navbar">
+    <div class="logo">Hot<span>Beans</span></div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="jobs.html">Jobs</a></li>
+      <li><a href="applynow.html">Apply Now</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="courses.html">Courses</a></li>
+    </ul>
+  </nav>
+  
+<body>
+    <section class="team">
+        <div class="container">
+          <h2>Meet Our Team</h2>
+          <p>Our experienced developers and mentors are here to guide you.</p>
+      
+          <div class="team-grid">
+      
+            <div class="card">
+              <img src="Chris Everret.jpg" alt="AI generated person">
+              <h3>Chris Everret</h3>
+              <p>Lead Developer</p>
+              <p>Chris Everett – Lead Developer
+                Chris Everett is a results-driven Lead Developer with a passion for building scalable, maintainable, and high-performing software systems. With years of hands-on experience across multiple tech stacks, he specializes in designing architecture that balances performance with long-term flexibility. Chris thrives in fast-paced environments where problem-solving and innovation are essential, and he’s known for his ability to break down complex technical challenges into practical, actionable solutions.</p>
+            </div>
+      
+            <div class="card">
+              <img src="raj kapur.jpg" alt="AI generated person">
+              <h3>Rajeet Kapur</h3>
+              <p>Frontend Engineer</p>
+              <p>Rajeet Kapur is a detail-oriented Frontend Engineer with a strong passion for crafting intuitive, responsive, and visually engaging user interfaces. With extensive experience in modern web technologies, he specializes in translating complex design concepts into seamless digital experiences. Rajeet focuses on performance optimization, accessibility, and cross-browser compatibility to ensure users receive a consistent and enjoyable experience. He thrives in collaborative environments, working closely with designers and backend teams to bring ideas to life. Known for his clean code practices and creative problem-solving skills, Rajeet is dedicated to building scalable frontend architectures that evolve with user needs and industry trends.</p>
+            </div>
+      
+            <div class="card">
+              <img src="Sanjeet Khan.jpg"AI generated person">
+              <h3>Sanjeet Khan</h3>
+              <p>Backend Developer</p>
+              <p>Sanjeet Khan is a skilled Backend Developer known for building robust, secure, and efficient server-side applications. With a deep understanding of databases, APIs, and system architecture, he excels at designing solutions that handle complex business logic and large-scale data processing. Sanjeet has hands-on experience with multiple backend frameworks and is committed to writing clean, maintainable, and well-documented code. He enjoys tackling challenging technical problems and optimizing systems for speed and reliability. In fast-paced development environments, Sanjeet stands out for his analytical thinking and ability to deliver high-quality solutions that support long-term scalability and performance.</p>
+            </div>
+      
+            <div class="card">
+              <img src="daniel kim.jpg" alt="AI generated person">
+              <h3>Daniel Kim</h3>
+              <p>UX Designer</p>
+              <p>Daniel Kim is a creative UX Designer dedicated to enhancing user satisfaction through thoughtful and research-driven design. With a strong foundation in user behavior analysis, wireframing, and prototyping, he creates experiences that are both functional and aesthetically pleasing. Daniel believes that great design starts with understanding the user, and he consistently applies user-centered design principles to every project. He collaborates closely with developers and stakeholders to ensure designs are practical and impactful. Known for his attention to detail and innovative mindset, Daniel strives to simplify complex interactions and deliver meaningful, engaging digital experiences.</p>
+            </div>
+      
+            <div class="card">
+              <img src="emily johnson.jpg" alt="AI generated person">
+              <h3>Emily Johnson</h3>
+              <p>Instructor</p>
+              <p>Emily Johnson is an experienced Instructor passionate about empowering learners through clear, engaging, and practical teaching methods. With a strong background in technology and education, she specializes in breaking down complex concepts into easy-to-understand lessons that resonate with students of all skill levels. Emily fosters an interactive learning environment where curiosity and critical thinking are encouraged. She is committed to helping individuals build confidence and develop real-world skills that support their personal and professional growth. Known for her approachable style and dedication to student success, Emily continuously adapts her teaching strategies to meet evolving learning needs.</p>
+            </div>
+      
+            <div class="card">
+              <img src="Chris Tennet.jpg" alt="AI generated person">
+              <h3>Michael Brown</h3>
+              <p>Career Advisor</p>
+              <p>Michael Brown is a dedicated Career Advisor focused on guiding individuals toward meaningful and successful career paths. With extensive experience in professional development, resume building, and interview preparation, he provides practical advice tailored to each individual’s goals and strengths. Michael is passionate about helping people identify their potential and navigate today’s competitive job market with confidence. He works closely with clients to develop strategic career plans and improve their professional presence. Known for his supportive approach and insightful guidance, Michael empowers individuals to make informed decisions and achieve long-term career success.</p>
+            </div>
+      
+          </div>
+        </div>
+      </section>
+      <style>
+
+.navbar{
+  background-color: #634e6eb4;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.logo span{
+  color: orange;
+}
+.navbar ul{
+  display: flex;
+  list-style: none;
+}
+.navbar li{
+  margin-right: 20px;
+}
+.navbar a{
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.navbar a {
+position: relative;
+text-decoration: none;
+color: white;
+padding: 10px 15px;
+transition: all 0.3s ease;
+}
+
+
+.navbar a:hover {
+transform: translateY(-3px);
+}
+
+
+.navbar a::after {
+content: "";
+position: absolute;
+left: 0;
+bottom: -3px;
+width: 0%;
+height: 2px;
+background: white;
+transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+width: 100%;
+}
+
+
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 40px 0;
+}
+
+.about p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.highlight {
+  background: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-left: 5px solid orange;
+}
+
+.team {
+  text-align: center;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  width: 100%;
+  height: 250px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #333;
+  color: white;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: #f7f9fc;
+  margin: 0;
+  padding: 30px 15px;
+  color: #1a1a1a;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 8px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 35px;
+  font-size: 0.95rem;
+}
+
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.team-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 18px 15px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  
+}
+
+.team-card img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.team-card h3 {
+  margin: 8px 0 4px;
+  font-size: 1.05rem;
+}
+
+.team-card .role {
+  font-size: 0.8rem;
+  color: #6c63ff;
+  margin-bottom: 8px;
+}
+
+.team-card p {
+  font-size: 0.78rem;
+  line-height: 1.4;
+  color: #555;
+
+  display: -webkit-box;
+  overflow: hidden;
+}
+
+@media (max-width: 900px) {
+  .team-container {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+      </style>
+</body>
+</html>
